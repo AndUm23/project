@@ -5,6 +5,10 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 
+@app.before_first_request
+def create_tables():
+    db.create_all()
+    
 db = SQLAlchemy(app)
 
 from routes import *
