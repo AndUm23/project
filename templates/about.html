@@ -4,18 +4,11 @@
 <p>Content on the about page</p>
 <form action="/about" method="post">
     {{ form.csfr_token }}
-    {{ form.name }}
-    {{ form.email }}
-    {{ form.password }}
     {{ form.title.label }}
     {{ form.title }} 
     {{ form.submit }}
 </form>
-
-
-<h1>{{ title }}</h1>
-
 {% if title %}
-<h1>{{ title }}</h1>
+    <h1>{{ title }}</h1>
 {% endif %}
 {% endblock %}

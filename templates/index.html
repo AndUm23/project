@@ -2,5 +2,12 @@
 
 {% block main %}
 <p>Content on the home page</p>
+
+<h1> Tasks </h1>
+<ul>
+    {% for task in tasks %}
+        <li>{{ task.title }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
 
